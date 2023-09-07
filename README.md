@@ -26,7 +26,7 @@
 
 # docker
 
-卸载 Docker：
+ ## 卸载 Docker：
 停止所有正在运行的 Docker 容器。可以使用以下命令停止所有容器:
 docker stop $(docker ps -aq)
 
