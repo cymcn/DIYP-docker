@@ -27,15 +27,21 @@
 # docker
 
 docker ps <列出所有容器 ID>
+
 docker stop <停止-容器ID>
+
 docker rm <删除-容器ID>
 
 docker images <列出所有镜像 ID>
+
 docker rmi <镜像ID>
 
 docker stop $(docker ps -aq)      <停止所有容器>
+
 docker rm $(docker ps -aq)      <删除所有容器>
+
 docker rmi $(docker images -aq)  <删除所有镜像>
+
 sudo rm -rf /var/lib/docker   <删除该目录>
 
  ## 卸载 Docker：
