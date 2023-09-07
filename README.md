@@ -259,5 +259,9 @@ docker rm ID #删除Alist容器(数据还在只要你不手动删除)
 
 docker pull xhofe/alist:latest
 
+## 4.监控运行时间（uptime-kuma）
+https://github.com/louislam/uptime-kuma
+
+docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
 
 
