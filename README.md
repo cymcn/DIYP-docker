@@ -273,6 +273,7 @@ docker run -d -p 3000:3000 \
    -e OPENAI_API_KEY=sk-xxxx \
    -e CODE=your-password \
    yidadaa/chatgpt-next-web
+   
 您可以在代理后面启动服务：
 
 docker run -d -p 3000:3000 \
