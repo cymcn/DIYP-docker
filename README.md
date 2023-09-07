@@ -241,5 +241,23 @@ docker run -dit \
 whyour/qinglong:2.11.3
 
 
+## 3.Alist 安装：
+   https://hub.docker.com/r/xhofe/alist
+   https://alist.nn.ci/zh/guide/install/docker.html
+
+ 稳定版:
+ 
+  docker run -d --restart=always -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
+
+Docker安装怎么更新:
+
+docker ps -a #查看容器(找Alist容器的ID)
+
+docker stop ID #停止Alist运行,不然无法删除(这次Alist容器的ID是d429749a6e69，每一次安装都不一样自己看)
+
+docker rm ID #删除Alist容器(数据还在只要你不手动删除)
+
+docker pull xhofe/alist:latest
+
 
 
