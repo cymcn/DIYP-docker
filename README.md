@@ -259,9 +259,25 @@ docker rm ID #删除Alist容器(数据还在只要你不手动删除)
 
 docker pull xhofe/alist:latest
 
-## 4.监控运行时间（uptime-kuma）
+## 4.监控运行时间（uptime-kuma）:
 https://github.com/louislam/uptime-kuma
 
 docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
 
+## 5.ChatGPT-Next-Web:
+https://github.com/Yidadaa/ChatGPT-Next-Web
 
+docker pull yidadaa/chatgpt-next-web
+
+docker run -d -p 3000:3000 \
+   -e OPENAI_API_KEY=sk-xxxx \
+   -e CODE=your-password \
+   yidadaa/chatgpt-next-web
+您可以在代理后面启动服务：
+
+docker run -d -p 3000:3000 \
+   -e OPENAI_API_KEY=sk-xxxx \
+   -e CODE=your-password \
+   -e PROXY_URL=http://localhost:7890 \
+   yidadaa/chatgpt-next-web
+   
