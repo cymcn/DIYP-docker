@@ -108,6 +108,25 @@ docker info
 
 #  docker部署项目
 
+代码说明：
+
+docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env
+
+
+docker run: 这是运行 Docker 容器的命令。
+
+-d: 这个参数表示以后台（detached）模式运行容器，使其在后台运行而不阻塞终端。
+
+--restart unless-stopped: 这个参数指定了容器的重启策略，除非手动停止容器，否则容器会在退出或重启时自动重启。
+
+--privileged=true: 这个参数赋予容器特权，允许容器内的进程拥有访问主机系统的权限。
+
+-p 5678:80: 这个参数将主机的端口 5678 映射到容器的端口 80，这样可以通过访问主机的 5678 端口来访问容器中运行的应用程序。
+
+--name php-env: 这个参数为容器指定一个名称，即 "php-env"。
+
+youshandefeiyang/php-env: 这是要拉取的 PHP 环境镜像的名称。Docker 会从 Docker Hub 上下载该镜像，以便在容器中运行 PHP 环境）
+
 ## 1.官方PHP8.2 Docker一键命令：
 
 拉取 PHP 8.2.x 镜像并运行容器（5211是可调整端口）：
@@ -133,7 +152,9 @@ TTYD终端命令：
 访问地址：
 
 http://你的IP:5211/xxx.php?id=xxx&xx=xxx...
+
                如：/huya.php?id=11342387
+               
                   /douyu.php?id=4246519
 
 ## 2.肥羊的项目：
@@ -145,6 +166,7 @@ GitHub仓库地址：https://github.com/youshandefeiyang
 PHP集成肥羊解密扩展环境Docker镜像（基于PHP8.1）：
 
 本镜像既可以运行普通PHP程序，又可以运行肥羊加密PHP代理，使用方法：
+
 一键运行：
 
 amd64架构：
