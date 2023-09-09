@@ -147,15 +147,7 @@ youshandefeiyang/php-env: 这是要拉取的 PHP 环境镜像的名称。Docker 
 ## 1.官方PHP8.2 Docker一键命令：
 
 拉取 PHP 8.2.x 镜像并运行容器（5211是可调整端口）：
-docker run -d -p 5211:80 --name php-container php:8.2 php -S 0.0.0.0:80 -t /var/www/html
-
-安装 Docker
-opkg update
-opkg install docker
-
- 启动 Docker 服务
-/etc/init.d/docker start
-
+docker run -d -p 5211:80 --restart unless-stopped --name php-container php:8.2 php -S 0.0.0.0:80 -t /var/www/html
 
 
 在根目录 root/root建test文件夹
