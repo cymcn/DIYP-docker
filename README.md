@@ -293,4 +293,11 @@ docker run -d -p 3000:3000 \
    -e CODE=your-password \
    -e PROXY_URL=http://localhost:7890 \
    yidadaa/chatgpt-next-web
-   
+
+## 6.自动签到（qd）:
+https://github.com/qd-today/qd/
+
+镜像：https://hub.docker.com/r/a76yyyy/qiandao
+
+安装一键：
+docker run -d -p 5278:80 --restart unless-stopped --name qiandao a76yyyy/qiandao
