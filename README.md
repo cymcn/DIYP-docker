@@ -128,6 +128,10 @@ docker info
 
 
 #  **********************  docker部署项目     **********************  
+#  **********************  docker部署项目     **********************  
+#  **********************  docker部署项目     **********************  
+#  **********************  docker部署项目     **********************  
+
 代码说明：
 
 docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env
@@ -351,5 +355,90 @@ docker run --name kmfaka -itd -p 8777：8000 baiyuetribe / kamifaka：latest
 ##  15.精简版宝塔系统：
 
 docker run -tid --name baota -p 88:80 -p 8888:8888 --restart always baiyuetribe/baota_mini #仅300mb
+
+##  16. Docker 管理器
+
+Portainer https://docs.portainer.io/v/ce-2.9/start/install/server/docker/linux
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer_data:/data \
+    portainer/portainer-ce:latest
+    
+##  17. 另一个管理程序 Docker 管理器 
+
+   连接后点更多 可以选择 简体中文
+docker run -d -p 10086:10086 -v /var/run/docker.sock:/var/run/docker.sock tobegit3hub/seagull
+
+##  18. Docker快速搭建 onlyoffice开源在线办公套件
+
+docker run -dit -p 6666:80 --restart=always onlyoffice/communityserver
+
+##  19. 演示oneindex搭建
+
+docker run -d -p 8181:80 --restart=always baiyuetribe/oneindex   
+
+##  20. 人人影视
+
+docker run -d -p 3001:3001 -v /opt/rrdata:/opt/work/store --name rrys baiyuetribe/rrshare  
+
+##  21. 在线播放视频
+
+docker run -t -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full  
+
+##  22. 宝塔迷你版
+
+docker run -tid --name baota -p 80:80 -p 8888:8888 --restart always baiyuetribe/baota_mini
+
+##  23. zdir
+
+mkdir /var/zdir
+docker run -d -p 8080:80 -v zdir:/var/www/html/var baiyuetribe/zdir
+
+##  24. docker搭建wireguard
+
+https://vksec.com/2021/07/08/194_docker%E6%90%AD%E5%BB%BAwireguard/
+
+##  25. Docker安装SaKuli桌面环境（基于Centos系统、附带chrome，支持中文）
+
+docker run -d -p 6080:6080 -e VNC_RESOLUTION=1920x1080 wangguanzzz/xfce-desktop
+
+##  26. Docker安装Xfce桌面环境（轻量可视化操作系统）
+
+docker run -d -p 6080:6080 -e VNC_RESOLUTION=1920x1080 yangxuan8282/alpine-xfce4-novnc:amd64
+
+##  27. Docker安装Raspbian（树莓派操作系统）
+
+docker run -d -p 6080:6080 yangxuan8282/pixel-novnc:amd64
+docker run -d -p 6080:6080 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/.X11-unix:/tmp/.X11-unix yangxuan8282/pixel-novnc:amd64
+
+##  28. 百度云盘Docker版安装方法(速度比普通客户端快)
+
+https://github.com/Baiyuetribe/baiduyunpan
+
+##  29. Diving：一款在线分析Docker镜像的工具，可本地部署（已开源） 可以查看docker的image文件
+
+  基于 dive 分析 docker 镜像，界面化展示了镜像每层的变动（增加、修改、删除等）、用户层数据大小等信息。便捷获取镜像信息和每层镜像内容的文件树，可以方便地浏览镜像信息。对于需要优化镜像体积时非常方便
+  项目地址：https://github.com/vicanso/diving
+  docker run -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock -p 7001:7001 vicanso/diving
+
+# Docker Macvlan下运行OpenWrt旁路由
+# qbittorrent
+https://hub.docker.com/r/linuxserver/qbittorrent
+
+# 编译固件 
+
+  https://github.com/x-wrt
+  直接下载固件网盘 https://drive.google.com/drive/folders/1dqNUrMf9n7i3y1aSh68U5Yf44WQ3KCuh
+  参考文章 https://github.com/esirplayground/VPS_OpenWrt
+  https://hub.docker.com/r/unifreq/openwrt-aarch64
+
+# 渗透测试parrotsec环境
+
+docker run -d -p 10022:22 -ti --name parrot -v $PWD/work:/work parrotsec/core
+docker run -d -p 10022:22 -ti --name parrot -v $PWD/work:/work parrotsec
+docker run -d -ti --name pdebian -v $PWD/work:/work debian
+
+
 
 
