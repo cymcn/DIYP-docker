@@ -306,6 +306,7 @@ docker run -d -p 5278:80 --restart unless-stopped --name qiandao a76yyyy/qiandao
 ##  7.刮削alist聚合网盘:
 https://github.com/msterzhang/onelist
 https://github.com/cymcn/guaxiao-alist/blob/main/docs/docker_install.md
+
 安装一键：
 docker run -d --name onelist -e PUID=0 -e PGID=0 -e TZ=Asia/Shanghai -p 5245:5245 -v /root/onelist/config:/config --add-host api.themoviedb.org:13.224.161.90 msterzhang/onelist:latest
 
