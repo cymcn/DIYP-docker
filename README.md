@@ -1,4 +1,5 @@
- ## <font color="red">VM虚拟机-安装OPENWRT</font>
+ # [VM虚拟机-安装OPENWRT] <span style="color:blue">(蓝色文本)</span>
+
 
 
 账号：root  
