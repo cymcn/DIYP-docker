@@ -367,7 +367,8 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     
 ##  17. 另一个管理程序 Docker 管理器 
 
-   连接后点更多 可以选择 简体中文
+连接后点更多 可以选择 简体中文
+
 docker run -d -p 10086:10086 -v /var/run/docker.sock:/var/run/docker.sock tobegit3hub/seagull
 
 ##  18. Docker快速搭建 onlyoffice开源在线办公套件
@@ -393,6 +394,7 @@ docker run -tid --name baota -p 80:80 -p 8888:8888 --restart always baiyuetribe/
 ##  23. zdir
 
 mkdir /var/zdir
+
 docker run -d -p 8080:80 -v zdir:/var/www/html/var baiyuetribe/zdir
 
 ##  24. docker搭建wireguard
@@ -410,6 +412,7 @@ docker run -d -p 6080:6080 -e VNC_RESOLUTION=1920x1080 yangxuan8282/alpine-xfce4
 ##  27. Docker安装Raspbian（树莓派操作系统）
 
 docker run -d -p 6080:6080 yangxuan8282/pixel-novnc:amd64
+
 docker run -d -p 6080:6080 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/.X11-unix:/tmp/.X11-unix yangxuan8282/pixel-novnc:amd64
 
 ##  28. 百度云盘Docker版安装方法(速度比普通客户端快)
@@ -419,24 +422,33 @@ https://github.com/Baiyuetribe/baiduyunpan
 ##  29. Diving：一款在线分析Docker镜像的工具，可本地部署（已开源） 可以查看docker的image文件
 
   基于 dive 分析 docker 镜像，界面化展示了镜像每层的变动（增加、修改、删除等）、用户层数据大小等信息。便捷获取镜像信息和每层镜像内容的文件树，可以方便地浏览镜像信息。对于需要优化镜像体积时非常方便
+  
   项目地址：https://github.com/vicanso/diving
+  
   docker run -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock -p 7001:7001 vicanso/diving
 
 # Docker Macvlan下运行OpenWrt旁路由
-# qbittorrent
-https://hub.docker.com/r/linuxserver/qbittorrent
+
+ qbittorrent
+ 
+ https://hub.docker.com/r/linuxserver/qbittorrent
 
 # 编译固件 
 
   https://github.com/x-wrt
+  
   直接下载固件网盘 https://drive.google.com/drive/folders/1dqNUrMf9n7i3y1aSh68U5Yf44WQ3KCuh
+  
   参考文章 https://github.com/esirplayground/VPS_OpenWrt
+  
   https://hub.docker.com/r/unifreq/openwrt-aarch64
 
 # 渗透测试parrotsec环境
 
 docker run -d -p 10022:22 -ti --name parrot -v $PWD/work:/work parrotsec/core
+
 docker run -d -p 10022:22 -ti --name parrot -v $PWD/work:/work parrotsec
+
 docker run -d -ti --name pdebian -v $PWD/work:/work debian
 
 
