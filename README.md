@@ -1,4 +1,4 @@
- # [VM虚拟机-安装OPENWRT] <span style="color:blue">(蓝色文本)</span>
+ # VM虚拟机-安装OPENWRT
 
 
 
