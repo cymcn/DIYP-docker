@@ -302,3 +302,34 @@ https://github.com/qd-today/qd/
 
 安装一键：
 docker run -d -p 5278:80 --restart unless-stopped --name qiandao a76yyyy/qiandao
+
+##  7.刮削alist聚合网盘:
+https://github.com/msterzhang/onelist
+https://github.com/cymcn/guaxiao-alist/blob/main/docs/docker_install.md
+安装一键：
+docker run -d --name onelist -e PUID=0 -e PGID=0 -e TZ=Asia/Shanghai -p 5245:5245 -v /root/onelist/config:/config --add-host api.themoviedb.org:13.224.161.90 msterzhang/onelist:latest
+
+
+##  8.可道云（私有云）代码：docker run -d -p 8001:80 --name kodexplorer -v /mnt/sdb1/kodexplorer:/var/www/html azking/kodexplorer:4.4.0
+
+##  9.adguardhome（去广告）代码：docker run --name adguardhome -v /opt/adguardhome/workdir:/opt/adguardhome/work -v /opt/adguardhome/confdir:/opt/adguardhome/conf -p 3001:53/tcp -p 3001:53/udp -p 3002:67/udp -p 3003:68/tcp -p 3003:68/udp -p 3004:80/tcp -p 3005:443/tcp -p 3006:853/tcp -p 3007:3000/tcp -d adguard/adguardhome
+
+##  10.轻量级个人网盘：docker run \
+    -v /path/to/root:/srv \
+    -v /path/filebrowser.db:/database.db \
+    -v /path/.filebrowser.json:/.filebrowser.json \
+    -p 8080:80 \
+    filebrowser/filebrowser
+
+##  11.免费音乐播放器：docker run -d --name music -p 264:264 -v <本机缓存目录>:/var/www/html/cache oldiy/music-player-docker
+
+##  12.steam挂卡：docker run -it -p 1242:1242 -v /opt/asf:/app/config --name asf justarchi/archisteamfarm
+
+##  13.红白机怀旧游戏：docker run -d --name dosgame -p 262:262 oldiy/dosgame-web-docker:latest
+
+##  14.发卡系统：docker run --name kmfaka -itd -p 8777：8000 baiyuetribe / kamifaka：latest
+后台（ip:8777/admin）管理员：账号admin@qq.com 密码123456
+
+##  15.精简版宝塔系统：docker run -tid --name baota -p 88:80 -p 8888:8888 --restart always baiyuetribe/baota_mini #仅300mb
+
+
