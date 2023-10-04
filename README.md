@@ -3,6 +3,8 @@
 
 # docker
 
+#### 基本简明
+
 docker ps <列出所有容器 ID>
 
 docker stop <停止-容器ID>
@@ -21,7 +23,7 @@ docker rmi $(docker images -aq)  <删除所有镜像>
 
 sudo rm -rf /var/lib/docker   <删除该目录>
 
- ## 卸载 Docker：
+ #### 卸载 Docker：
 停止所有正在运行的 Docker 容器。可以使用以下命令停止所有容器:
 
 docker stop $(docker ps -aq)
@@ -39,7 +41,7 @@ docker rmi $(docker images -aq)
 sudo rm -rf /var/lib/docker
 
 
-## Docker删除 容器：
+#### Docker删除 容器：
 首先，使用以下命令列出正在运行的 Docker 容器：
 
 docker ps
@@ -60,7 +62,7 @@ docker rm <容器名称或 ID>
 
 将 <容器名称或 ID> 替换为您要删除的容器的名称或 ID。
 
-## Docker删除 镜像：
+#### Docker删除 镜像：
 
 首先，使用以下命令列出所有的 
 
