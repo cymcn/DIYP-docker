@@ -1,4 +1,5 @@
-# VM虚拟机-安装OPENWRT
+[VM虚拟机-安装OPENWRT](https://github.com/username/repository) {: style="color: blue;"}
+
 账号：root  
 密码：password
 
