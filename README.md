@@ -321,9 +321,12 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     
 ##  17. 另一个管理程序 Docker 管理器 
 
-连接后点更多 可以选择 简体中文
 
-docker run -d -p 10086:10086 -v /var/run/docker.sock:/var/run/docker.sock tobegit3hub/seagull
+
+1.Seagull中文版：      docker run -d -p 10086:10086 -v /var/run/docker.sock:/var/run/docker.sock tobegit3hub/seagull （连接后点更多 可以选择 简体中文）
+
+2.portainer-ce中文版： docker run -d --restart=always --name="portainer" -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock 6053537/portainer-ce
+
 
 ##  18. Docker快速搭建 onlyoffice开源在线办公套件
 
@@ -405,9 +408,9 @@ docker run -d -p 10022:22 -ti --name parrot -v $PWD/work:/work parrotsec
 
 docker run -d -ti --name pdebian -v $PWD/work:/work debian
 
- # ↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘    ↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙
-  # ↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘    ↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙
-   # ↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘    ↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙
+ #                                                      ↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘    ↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙
+ #                                                      ↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘    ↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙
+ #                                                       ↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘↘    ↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙↙
 
  # VM虚拟机-安装OPENWRT
 
