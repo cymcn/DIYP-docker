@@ -497,4 +497,42 @@ config proxy
 	option remote_port '20007'
 	option subdomain 'web.4*****.xyz'
 
-## openwrt:
+## iStoreOS:
+
+config init
+	option stdout '1'
+	option stderr '1'
+	option respawn '1'
+	option user 'root'
+	option group 'root'
+
+config conf 'common'
+	option server_port '7000'
+	option server_addr '143.45.265.25'
+	option token 'ZDFreeFrp'
+	option tls_enable 'false'
+	list _ 'tcp_mux = false'
+	list _ 'protocol = tcp'
+	list _ 'user = d69006e372022d'
+	list _ 'dns_server = 114.114.114.114'
+
+config conf 'ssh'
+	option name 'ssh'
+	option type 'http'
+	option use_encryption 'false'
+	option use_compression 'false'
+	option local_ip '192.168.0.223'
+	option local_port '2345'
+	option custom_domains 'w80.484445.link'
+
+config conf
+	option name '6789'
+	option type 'http'
+	option use_encryption 'false'
+	option use_compression 'false'
+	option local_ip '192.168.0.223'
+	option local_port '6789'
+	option custom_domains 'w6789.481444.link'
+
+
+
