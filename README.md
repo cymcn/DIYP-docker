@@ -463,3 +463,38 @@ docker info
 
 如果 Docker 正确运行，则会显示 Docker 的一些基本信息。
 
+# frp 配置：
+
+## openwrt:
+
+config frp 'common'
+	option log_max_days '3'
+	option login_fail_exit '0'
+	option enable_cpool '0'
+	option time '40'
+	option tcp_mux '1'
+	option vhost_http_port '80'
+	option vhost_https_port '443'
+	option log_level 'info'
+	option enable_http_proxy '0'
+	option protocol 'tcp'
+	option server_addr '****.vip'
+	option server_port '3050'
+	option user '*******9c4-4a95-939b-69adcdb355db'
+	option tls_enable '0'
+	option admin_enable '0'
+	option enabled '1'
+
+config proxy
+	option enable '1'
+	option proxy_protocol_version 'disable'
+	option use_encryption '1'
+	option use_compression '1'
+	option remark 'alist'
+	option local_ip '192.168.120.1'
+	option local_port '5244'
+	option type 'tcp'
+	option remote_port '20007'
+	option subdomain 'web.4*****.xyz'
+
+## openwrt:
