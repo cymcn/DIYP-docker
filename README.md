@@ -534,5 +534,13 @@ config conf
 	option local_port '6789'
 	option custom_domains 'w6789.481444.link'
 
+# Clash
 
+Clash Verge软件下载地址：https://github.com/zzzgydi/clash-verge
+
+Clash Nyanpasu软件下载地址：https://github.com/keiko233/clash-nyanpasu
+
+Clash.Rev内核下载地址：https://github.com/MerlinKodo/clash-rev
+
+下载对应内核文件改名：clash-meta，更换\Clash Verge  \Clash Nyanpasu下的clash-meta文件，在设置 重新启动内核功能
 
