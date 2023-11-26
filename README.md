@@ -544,3 +544,19 @@ Clash.Rev内核下载地址：https://github.com/MerlinKodo/clash-rev
 
 下载对应内核文件改名：clash-meta，更换\Clash Verge  \Clash Nyanpasu下的clash-meta文件，在设置 重新启动内核功能
 
+## notepad++ 
+
+  删除每行N个字符原创（Ctrl + H）：
+  1、按住Alt键. 2、移动光标，选中需要删除的内容. 3、按下删除键
+  https://blog.csdn.net/qq_42723240/article/details/112212557
+
+  加每行前n个字符：
+  在正则表达式中，特殊字符^表示行首，$表示行尾，由此执行以下操作，可以实现上述要求
+  https://blog.csdn.net/qq_35298337/article/details/103348291
+
+  Notepad++去掉每行某个字符串前面的字符，删除重复行
+  去掉每行某个字符串前面的字符：
+  删除S 之前的所有字符用：^.*s
+  删除S 之后的所有字符用：s.*$
+  https://www.cnblogs.com/MasterMonkInTemple/p/15882951.html
+
