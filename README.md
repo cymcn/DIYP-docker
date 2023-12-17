@@ -1,5 +1,3 @@
-# N1 frp 配置：
-  https://raw.githubusercontent.com/cymcn/Docker-DIY/main/frp
 
 
 # docker
@@ -464,9 +462,14 @@ docker info
 
 如果 Docker 正确运行，则会显示 Docker 的一些基本信息。
 
-# frp 配置：
 
-## openwrt:
+
+
+# N1 frp 配置：
+  https://raw.githubusercontent.com/cymcn/Docker-DIY/main/frp
+
+
+# openwrt frp 配置:
 
 config frp 'common'
 	option log_max_days '3'
