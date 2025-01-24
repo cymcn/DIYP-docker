@@ -570,7 +570,7 @@ Clash.Rev内核下载地址：https://github.com/MerlinKodo/clash-rev
   
   https://www.cnblogs.com/MasterMonkInTemple/p/15882951.html 
 
-##： Windows 自定义 URI 支持（VLC
+# Windows 自定义 URI 支持（VLC
  
  
 Windows 自定义 URI 支持（VLC）：https://evlic.notion.site/Windows-URI-VLC-d082c23e09f5435ab035d1918b4fc711
