@@ -568,5 +568,38 @@ Clash.Rev内核下载地址：https://github.com/MerlinKodo/clash-rev
   删除S 之前的所有字符用：^.*s
   删除S 之后的所有字符用：s.*$
   
-  https://www.cnblogs.com/MasterMonkInTemple/p/15882951.html
+  https://www.cnblogs.com/MasterMonkInTemple/p/15882951.html 
+
+##： Windows 自定义 URI 支持（VLC
+ 
+ 
+Windows 自定义 URI 支持（VLC）：https://evlic.notion.site/Windows-URI-VLC-d082c23e09f5435ab035d1918b4fc711
+ 
+1.建一个名称vlc的.reg文件的注册表：
+ 
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\vlc]
+"URL Protocol"="C:\\Program Files\\VideoLAN\\VLC\\vlc.exe（vlc的文件存在的路径）"
+@="FileVersionProtocol"
+[HKEY_CLASSES_ROOT\vlc\DefaultIcon]
+@="{{C:\\Program Files\\VideoLAN\\VLC\\vlc.exe（vlc的文件存在的路径）}},1"
+[HKEY_CLASSES_ROOT\vlc\shell]
+[HKEY_CLASSES_ROOT\vlc\shell\open]
+[HKEY_CLASSES_ROOT\vlc\shell\open\command]
+@="\"C:\\Program Files\\VideoLAN\\VLC\\vlc（vlc的文件存在的路径）.bat\" \"%1\""
+ 
+ 
+2.建一个名称vlc的..bat文件：
+ 
+set aa=%1 
+@start "" "C:\\Program Files\\VideoLAN\\VLC\\vlc.exe" %aa:vlc://=% 
+exit
+ 
+备注：C:\\Program Files\\VideoLAN\\VLC\\vlc.exe 是vlc的文件存在的路径
+ 
+ 
+ 
+3.文件1和文件2放到 vlc路径我文件夹里，运行.reg文件的注册表
+ 
+
 
